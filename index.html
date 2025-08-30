@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>🎮 Tic-Tac-Toe Web App</h1>
+        <p>Get 3 in a row to win! Play against a friend or family member.</p>
+    </header>
+
+    <div class="scoreboard">
+        <p>Player X Wins: <span id="scoreX">0</span></p>
+        <p>Player O Wins: <span id="scoreO">0</span></p>
+        <p>Ties: <span id="scoreTie">0</span></p>
+    </div>
+
+    <div class="game-board" id="gameBoard"></div>
+
+    <div class="game-info">
+        <p id="status">Player X's turn</p>
+        <button id="resetBtn">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

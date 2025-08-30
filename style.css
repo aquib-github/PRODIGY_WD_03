@@ -1,0 +1,112 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #283e51, #485563);
+    overflow: hidden;
+}
+
+header h1 {
+    margin: 30px 0 5px 0;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    margin: 15px 0 30px 0;
+    font-size: 18px;
+    color: #f0f0f0;
+    line-height: 1.4;
+}
+
+.scoreboard {
+    margin: 15px auto;
+    font-size: 18px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.scoreboard p {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 15px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.cell {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    transition: all 0.3s ease;
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.winning-cell {
+    animation: glow 1s infinite alternate;
+    border: 3px solid #00ffcc;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #00ffcc;
+    }
+
+    to {
+        box-shadow: 0 0 25px #00ffcc, 0 0 40px #00ffcc;
+    }
+}
+
+.game-info {
+    margin-top: 20px;
+}
+
+#status {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    background: linear-gradient(135deg, #ff6b6b, #ff3b3b);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff3b3b, #d62828);
+    transform: scale(1.05);
+}
